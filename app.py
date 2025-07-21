@@ -15,18 +15,19 @@ def download_file(url, destination):
         st.write(f"{destination} already exists. Skipping download.")
 
 # Download the .pkl files if not present
-movies_url = 'https://drive.google.com/uc?export=download&id=1tGjr3L_QbSapZ7hGuiNXpdEhpO9aqW20'
-
-similarity_url = 'https://drive.google.com/uc?export=download&id=1juJfqd1qkw6hoMbtPWqeQUlEHxKFDQ0J' 
+movies_url = 'https://drive.google.com/uc?export=download&id=1Cdi5TbnaPbp5lDjKiZ8KWkAO8P0YJ6fY'
 
 
-download_file(movies_url, 'movies.pkl')
-download_file(similarity_url, 'similarity.pkl')
+similarity_url = 'https://drive.google.com/uc?export=download&id=1eVHczxlSOz-aKZqW_1A2KhE61SmNNaxX' 
+
+
+download_file(movies_url, 'new_movies.pkl')
+download_file(similarity_url, 'new_similarity.pkl')
 
 
 # Load the downloaded pickle files
-movies = pickle.load(open('movies.pkl','rb'))
-similarity = pickle.load(open('similarity.pkl','rb'))
+movies = pickle.load(open('new_movies.pkl','rb'))
+similarity = pickle.load(open('new_similarity.pkl','rb'))
 
 # Fetch poster from TMDB
 def fetch_poster(id):
