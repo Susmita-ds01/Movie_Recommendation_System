@@ -7,12 +7,12 @@ import requests
 # Function to download files from Google Drive using gdown
 def download_file_from_drive(file_id, destination):
     if not os.path.exists(destination):
-        st.write(f"Downloading {destination}...")
+        # st.write(f"Downloading {destination}...")
         url = f'https://drive.google.com/uc?id={file_id}'
         gdown.download(url, destination, quiet=False)
-        st.write(f"{destination} downloaded successfully. Size: {os.path.getsize(destination)} bytes.")
-    else:
-        st.write(f"{destination} already exists. Skipping download.")
+        # st.write(f"{destination} downloaded successfully. Size: {os.path.getsize(destination)} bytes.")
+    #else:
+       #  st.write(f"{destination} already exists. Skipping download.")
 
 # Download the .pkl files if not present
 movies_file_id = '1Cdi5TbnaPbp5lDjKiZ8KWkAO8P0YJ6fY'
